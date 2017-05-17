@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Router</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        div.container {
+    width: 100%;
+
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+        .input-group {
+    float: right;
+}
+</style>
+
+</head>
+<body>
+
+
+    <header>
+         <h2>Raspberry Pi Router</h2>
+    </header>
+        <div >
+  <div class="input-group">
+    <a href="logout.html"> <label>Logout</label></a>
+
+  </div>
+</div>
+
+    </header>
+<BR>
+    <BR><BR>
+<form method="POST">
+    <table class="table">
+<tbody >
+<tr align="center">
+
+    <td>
+        <img src="/static/img/connected.png" height="300" width="300">
+        <br><br>
+
+    <a href="{{ url_for('devices') }}">
+        <div class=text-center >
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#dropModal">Connected Device</button>
+        </div></a>
+    </td>
+    <td>
+
+<img src="/static/img/block.jpg" height="300" width="300">
+       <br><br>
+        <div>
+            <a href="{{ url_for('drop') }}">
+        <div class=text-center >
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#dropModal">Block IP</button>
+
+        </div></a>
+      </div>
+    </td>
+    <td align="center">
+
+<img src="/static/img/log1.jpg" height="300" width="300">
+<br><br>
+
+    <a href="{{ url_for('logactivity') }}">
+        <div class=text-center >
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#dropModal">Log Activity of Clients</button>
+        </div></a>
+    </td>
+</tr>
+</tbody>
+
+    </table>
+</form>
+<br><br>
+    <br>
+    <br>
+<div class="container">
+    <footer>
+         <h5>Copyright2017@RIT_RaspberryPiRouter</h5>
+    </footer>
+</div>
+</div>
+
+</body>
+</html>

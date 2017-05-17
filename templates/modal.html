@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Router</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+        div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <header>
+         <h2>Raspberry pi Router</h2>
+    </header>
+
+    <!------------------------for connected clients in network-------------------------------------------------------- -->
+
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Connected Devices</button><br>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+              <div class="form-group">
+      <label for="sel1">Connected Devices </label>
+        <table class="table">
+    <thead>
+      <tr>
+        <th>IP address</th>
+        <th>Connection</th>
+        <th>Device Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>172.22.2.15</td>
+        <td>wifi</td>
+        <td>pc1</td>
+      </tr>
+      <tr class="success">
+        <td>192.22.3.12</td>
+        <td>ethernet</td>
+        <td>pc2</td>
+      </tr>
+      <tr class="danger">
+        <td>192.168.2.34</td>
+        <td>wifi</td>
+        <td>pc3</td>
+      </tr>
+    </tbody>
+        </table>
+        </div>
+        <div class="modal-body">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+    <!------------------------for drop client---------------------------------------------------------------------------->
+    <div>
+        <div class=text-center>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#dropModal">Drop client</button></div>
+    <div class="modal fade" id="dropModal" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+
+
+
+            </div>
+        <div class="modal-body">
+             <div class="form-group">
+                <label for drop="drop">Enter IP</label>
+                <input type="text" class="form-control" id="drop">
+                 <button type="button" class="btn btn-primary btn-lg" >Drop</button>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    </div>
+
+
+<!------------------------------------------for taking log activity of client--------------------------------------------------------------->
+        <div>
+            <div class=text-right>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#logModal">Log Activity of  client</button></div>
+            <div class="modal fade" id="logModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Clients Log activity</h4>
+        </div>
+        <div class="modal-body">
+             <div class="form-group">
+                <label for drop="drop">Enter IP file</label>
+                <input type="text" class="form-control" id="log">
+                 <button type="button" class="btn btn-primary btn-lg" id="log">Take Log</button>
+                 <textarea class="form-control" rows="10" id="log"></textarea>
+
+
+                 <button type="button" class="btn btn-primary btn-lg" id="updatelog">Update Log</button>
+                 <textarea class="form-control" rows="10" id="updatelog"></textarea>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
